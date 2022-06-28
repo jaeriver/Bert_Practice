@@ -17,3 +17,6 @@ pipe = pipeline(task="text-classification", model=model, framework='tf', tokeniz
 
 print(test_data['label'][:512])
 print(pipe(test_data['text'][:512]))
+
+model.save_pretrained('./bert-base-uncased')
+tokenizer.save_pretrained('./bert-base-uncased')
